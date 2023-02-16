@@ -1,0 +1,161 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=Lexend+Deca:wght@400;700&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CUSOTEM PROPERTIES */
+
+:root {
+    /* ## Colors*/
+
+    /* ### Primary */
+
+    --BRIGHT-ORANGE: hsl(31, 77%, 52%);
+    --DARK-CYAN: hsl(184, 100%, 22%);
+    --VERY-DARK-CYAN: hsl(179, 100%, 13%);
+
+    /* ### Neutral */
+    /* (paragraphs) */
+    --TRANSPARENT-WHITE: hsla(0, 0%, 100%, 0.75);
+    --VERY-LIGHT-GRAY
+    /* (background, headings, buttons) */
+    : hsl(0, 0%, 95%);
+
+    /* ## Typography */
+    /* 
+### Body Copy */
+
+    --FONT-SIZE: 15px;
+
+    /* ### Font */
+
+    --FAMILY: 'Lexend Deca', sans-serif;
+    --Regular: 400;
+
+    --FAMILY-TITLE: 'Big Shoulders Display', cursive;
+    --BOLD: 700;
+}
+
+
+/* GENERAL STYLES */
+
+body {
+    /* Place items in center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--FAMILY);
+    font-size: 15px;
+    color: var(--TRANSPARENT-WHITE);
+    background-color: var(--VERY-LIGHT-GRAY);
+    margin: 5% auto;
+}
+
+/* UTILS */
+
+.bg-orange {
+    background-color: var(--BRIGHT-ORANGE);
+}
+
+.orange {
+    color: var(--BRIGHT-ORANGE);
+}
+
+
+.bg-cyan {
+    background-color: var(--DARK-CYAN);
+}
+
+.cyan {
+    color: var(--DARK-CYAN);
+}
+
+
+.bg-dark-cyan {
+    background-color: var(--VERY-DARK-CYAN);
+}
+
+
+.dark-cyan {
+    color: var(--VERY-DARK-CYAN);
+}
+
+
+/* Styles */
+
+.grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    align-items: flex-start;
+    width: 300px;
+}
+
+.card:first-child {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.card__title {
+    font-family: var(--FAMILY-TITLE);
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    color: var(--VERY-LIGHT-GRAY);
+}
+
+.card__text {
+    line-height: 1.5;
+    height: 100px;
+}
+
+.btn {
+    display: block;
+    background-color: var(--VERY-LIGHT-GRAY);
+    outline: transparent;
+    border: 2px solid var(--VERY-LIGHT-GRAY);
+    border-radius: 30px;
+    padding: 6% 12%;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--VERY-LIGHT-GRAY);
+
+}
+
+/* FOR DESKTOPS */
+@media screen and (min-width:900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card:last-child {
+        border-radius: 0px 10px 10px 0px;
+    }
+}
